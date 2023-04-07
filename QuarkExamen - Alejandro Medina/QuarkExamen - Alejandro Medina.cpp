@@ -6,7 +6,7 @@
 using namespace std;
 
 #include "InterfaceViewer.cpp"
-
+#include "MainShopModel.cpp"
 
 
 
@@ -15,9 +15,16 @@ int main()
 	MyOutput *otp;
 	otp = new MyOutput();
 	otp->SystemMessage("This a test emessage");
-	otp->SystemMessage("This a test emessage2");
-	otp->SystemMessage("This a test emessage3");
 
+
+
+	Receip* rcp;
+	char name[40];
+	cin.getline(name, 40);
+	Clothes cl = Clothes(name);
+	Clothes clt[3] = { cl,cl,cl };
+	cout << "The Length of the Array is : " << end(clt) - begin(clt); //length
+	rcp = new Receip(0001,0001,clt);
 	return 0;
 }
 

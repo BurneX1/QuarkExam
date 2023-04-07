@@ -7,7 +7,7 @@ using namespace std;
 
 	class MyOutput {
 		char sep = '-';
-		int sepLng = 10;
+		int sepLng = 20;
 
 	public:
 		MyOutput();
@@ -23,14 +23,14 @@ using namespace std;
 	}
 	inline void MyOutput::Separator()
 	{
-		cout << " \n";
+
 		cout << " \n";
 		for (int i = 0; i < abs(sepLng); i++)
 		{
 			cout << sep;
 		}
 		cout << " \n";
-		cout << " \n";
+
 
 	}
 
@@ -41,9 +41,9 @@ using namespace std;
 
 	inline void MyOutput::SystemMessage(string msg)
 	{
-		Separator();
-		cout << "[System Message: " << msg << "]\n";
-		Separator();
+		//Separator();
+		cout << "\n" << "[System Message: " << msg << "]" << "\n";
+		//Separator();
 	}
 	
 
